@@ -1,2 +1,2 @@
 # ML-GGAT
-Prediction of subcellular localization of multi-labeled proteins based on interpretable graph attention networks and feature generative adversarial networks
+Predicting the multi-label protein subcellular localization based on interpretable graph attention networks and feature generative adversarial networks
