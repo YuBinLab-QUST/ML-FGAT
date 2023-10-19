@@ -1,6 +1,6 @@
 function [P] = MLSI_transform(X, Y, parameter)
 % 
-% Input: 
+% Input:
 %       X -- centered training instance matrix (N *d)
 %       Y -- centered training label matrix (N*q)
 %       parameter.ratio -- reduced ratio
