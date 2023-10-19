@@ -1,5 +1,5 @@
-function ebgw1= ebgw1(seq1,L)
-%len ¿ÉÒÔµ÷ÓÃÖ÷³ÌĞòÀïÃæµÄlensec
+function ebgw1= ebgw1(seq1,L) 
+%len å¯ä»¥è°ƒç”¨ä¸»ç¨‹åºé‡Œé¢çš„lensec
 seq1 = strrep(seq1,'X','');  % omit 'X'
 seq1 = strrep(seq1,'Z','');  % omit 'Z'
 seq1 = strrep(seq1,'B','');  % omit 'B'
@@ -7,7 +7,7 @@ seq1 = strrep(seq1,'O','');  % omit 'O'
 seq1 = strrep(seq1,'J','');  % omit 'J'
 seq1 = strrep(seq1,'U','');  % omit 'U'
 
-%·Ö×é1
+%åˆ†ç»„1
 c= strrep(seq1,'A','X');
 c1= strrep(c,'C','Z');
 c2= strrep(c1,'D','B');
@@ -29,7 +29,7 @@ c17= strrep(c16,'G','X');
 c18= strrep(c17,'H','O');
 c19= strrep(c18,'F','X');
 len=length(c19);
- %·Ö×é2
+ %åˆ†ç»„2
 %  for i=1:len
 %     if (seq1(i)=='G' || seq1(i)=='A' ||seq1(i)=='V' ||seq1(i)=='L' || seq1(i)=='I' ||seq1(i)=='M' ||seq1(i)=='P' || seq1(i)=='F' ||seq1(i)=='W')
 %             seq2(i)='X';
@@ -42,7 +42,7 @@ len=length(c19);
 %     end
 % end
  
-%Éú³É0-1Ó³Éä
+%ç”Ÿæˆ0-1æ˜ å°„
 
  seq2=zeros(1,len);
 for i=1:len
@@ -52,17 +52,17 @@ for i=1:len
            seq2(i)=0; 
     end
 end
-%¼ì²é0-1±àÂëÊÇ·ñÕıÈ·
+%æ£€æŸ¥0-1ç¼–ç æ˜¯å¦æ­£ç¡®
 % cc1=findstr(c19,'X');
 % cc2=findstr(c19,'Z');
 % cc3=findstr(c19,'B');
 % cc4=findstr(c19,'O');
-%ÇóÖØÁ¿£¬°Ñ¶ş½øÖÆĞòÁĞ±ä³É³¤¶ÈÊÇµİÔöµÄLÌõ×ÓĞòÁĞ£¬k×÷ÎªÑ­»·±äÁ¿,¿ØÖÆĞĞÊı£¬LÊÇº¯ÊıµÄÊäÈë±äÁ¿
-%ĞÂµÄĞòÁĞµÄ³¤¶ÈÓÉÁĞ¿ØÖÆ£¬£¨kn/L£©È¡ÕûÊÇ³¤¶È£¬¼´k*(len/L),È¡Õûfix
+%æ±‚é‡é‡ï¼ŒæŠŠäºŒè¿›åˆ¶åºåˆ—å˜æˆé•¿åº¦æ˜¯é€’å¢çš„Læ¡å­åºåˆ—ï¼Œkä½œä¸ºå¾ªç¯å˜é‡,æ§åˆ¶è¡Œæ•°ï¼ŒLæ˜¯å‡½æ•°çš„è¾“å…¥å˜é‡
+%æ–°çš„åºåˆ—çš„é•¿åº¦ç”±åˆ—æ§åˆ¶ï¼Œï¼ˆkn/Lï¼‰å–æ•´æ˜¯é•¿åº¦ï¼Œå³k*(len/L),å–æ•´fix
 for k=1:L
     chang=fix(k*(len/L));
     seq3=seq2(1,1:chang);
-    %¼ÆËã¸Ã×ÓĞòÁĞ1³öÏÖµÄÆµÂÊ
+    %è®¡ç®—è¯¥å­åºåˆ—1å‡ºç°çš„é¢‘ç‡
     ebgw1(1,k)=sum(seq3==1)/chang;
     clear chang seq3
 end
