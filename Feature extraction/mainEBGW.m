@@ -1,28 +1,28 @@
 clear all
 clc
 L=5;
-%%%%%
-fid=fopen('²¡¶¾CD-HIT.txt');
-string=fscanf(fid,'%s'); %ÎÄ¼şÊäÈë
-%Æ¥ÅäµÄ×Ö·û´®
-firstmatches=findstr(string,'>')+7;%¿ªÊ¼Î»ÖÃ
+%%%%
+fid=fopen('ç—…æ¯’CD-HIT.txt');
+string=fscanf(fid,'%s'); %æ–‡ä»¶è¾“å…¥
+%åŒ¹é…çš„å­—ç¬¦ä¸²
+firstmatches=findstr(string,'>')+7;%å¼€å§‹ä½ç½®
 endmatches=findstr(string,'>')-1;
-firstnum=length(firstmatches); %firstnum=endnumĞòÁĞµÄÌõÊı
+firstnum=length(firstmatches); %firstnum=endnumåºåˆ—çš„æ¡æ•°
 endnum=length(endmatches);
   for k=1:firstnum-1
     j=1;
-    lensec(k)=endmatches(k+1)-firstmatches(k)+1;%Ã¿ÌõĞòÁĞµÄ³¤¶È
+    lensec(k)=endmatches(k+1)-firstmatches(k)+1;%æ¯æ¡åºåˆ—çš„é•¿åº¦
    for mm=firstmatches(k):endmatches(k+1)
-        sequence(k,j)=string(mm); %×Ö·ûĞòÁĞ
+        sequence(k,j)=string(mm); %å­—ç¬¦åºåˆ—
         j=j+1;
    end
    
   end
-  %ÉÏÃæÊÇÌáÈ¡Ã¿ÌõĞòÁĞ£¬ÏÂÃæµ÷ÓÃÑ¡ÓÃsequence(1,:)
+  %ä¸Šé¢æ˜¯æå–æ¯æ¡åºåˆ—ï¼Œä¸‹é¢è°ƒç”¨é€‰ç”¨sequence(1,:)
 for i=1:firstnum-1
 eb1(i,:)= ebgw1(sequence(i,1:lensec(i)),L);
 eb2(i,:)= ebgw2(sequence(i,1:lensec(i)),L);
 eb3(i,:)= ebgw3(sequence(i,1:lensec(i)),L);
 end
-save ²¡¶¾CD-HIT.mat eb1 eb2 eb3
+save ç—…æ¯’CD-HIT.mat eb1 eb2 eb3
 
