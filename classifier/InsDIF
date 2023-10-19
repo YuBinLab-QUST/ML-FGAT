@@ -1,5 +1,5 @@
 function [HammingLoss,RankingLoss,OneError,Coverage,Average_Precision,Outputs,Pre_Labels,num_iter]=InsDif(train_data,train_target,test_data,test_target,ratio)
-%InsDif tackles multi-label learning problem through instance differentiation
+%InsDif tackles multi-label learning problem through instance differentiation 
 %
 %    Syntax
 %
