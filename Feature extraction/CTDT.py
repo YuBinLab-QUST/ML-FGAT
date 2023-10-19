@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr 22 16:38:23 2023
-
-@author: 戴尔
-"""
 
 import re
 import readFasta
