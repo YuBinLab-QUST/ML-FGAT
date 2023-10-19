@@ -1,7 +1,7 @@
 clear all
 clc
 lamdashu=10;
-%¶ÁÈ¡µ°°×ÖÊĞòÁĞµÄpssm
+%è¯»å–è›‹ç™½è´¨åºåˆ—çš„pssm 
 WEISHU=523;
 load('poxuliechangdu.mat')
 for i=1:WEISHU
@@ -9,17 +9,17 @@ for i=1:WEISHU
     name = strcat(nnn,'.pssm');
     fid{i}=importdata(name);
 end
-%ËùÓĞµ°°×ÖÊĞòÁĞ¹éÒ»»¯
+%æ‰€æœ‰è›‹ç™½è´¨åºåˆ—å½’ä¸€åŒ–
 c=cell(WEISHU,1);
 for t=1:WEISHU
     clear shu d
 shu=fid{t}.data;
-%ÖªµÀÃ¿Ìõµ°°×ÖÊµÄÊıÁ¿£¬ÌáÈ¡³öÀ´µÄ¾ØÕó£¬×¢Òâµ°°×ÖÊµÄË³Ğò
+%çŸ¥é“æ¯æ¡è›‹ç™½è´¨çš„æ•°é‡ï¼Œæå–å‡ºæ¥çš„çŸ©é˜µï¼Œæ³¨æ„è›‹ç™½è´¨çš„é¡ºåº
 % shuju=shu(1:i,1:20);
 [M,N]=size(shu);
 shuju=shu(1:len(1,t),1:20);
 d=[];
-%¹éÒ»»¯
+%å½’ä¸€åŒ–
 for i=1:len(1,t)
    for j=1:20
        d(i,j)=1/(1+exp(-shuju(i,j)));
@@ -27,14 +27,14 @@ for i=1:len(1,t)
 end
 c{t}=d(:,:);
 end
-%Éú³ÉPSSM-AAC,xÊÇÒ»¸ö,
+%ç”ŸæˆPSSM-AAC,xæ˜¯ä¸€ä¸ª,
 for i=1:WEISHU
 [MM,NN]=size(c{i});
  for  j=1:20
    x(i,j)=sum(c{i}(:,j))/MM;
  end
 end
-%PsePSSMºó20*lamda
+%PsePSSMå20*lamda
 xx=[];
 sheta=[];
 shetaxin=[];
