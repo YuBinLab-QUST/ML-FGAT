@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug 17 15:15:03 2023
 
-@author: 戴尔
-"""
 
 from numpy import * 
 
