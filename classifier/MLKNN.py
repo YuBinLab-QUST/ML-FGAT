@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd//导入常用库
- 
+  
 //编写ML-KNN算法
 def mlknn(train, test, id, label_columns, k)://id为特征，label_colums为标签
     smooth = 1.0
