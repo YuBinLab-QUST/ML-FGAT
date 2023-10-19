@@ -3,7 +3,7 @@ Predicting the multi-label protein subcellular localization based on interpretab
 
 ###ML-GGAT uses the following dependencies:
 
-Python 3.8 numpy pandas scikit-learn tensorflow keras
+Python 3.8 numpy pandas scikit-learn tensorflow keras 
 
 ###Guiding principles:
 
