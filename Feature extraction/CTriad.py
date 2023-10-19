@@ -3,7 +3,7 @@ import readFasta
 import numpy as np
 import scipy.io as sio
 import pandas as pd
-
+ 
 def CalculateKSCTriad(sequence, gap, features, AADict):
 	res = []
 	for g in range(gap+1):
