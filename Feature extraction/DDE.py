@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Mar  5 16:09:56 2023
 
-@author: 戴尔
-"""
 
 import re
 import math
