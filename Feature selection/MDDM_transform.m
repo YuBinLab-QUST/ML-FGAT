@@ -1,6 +1,6 @@
 function [P] = MDDM_transform(X,Y, parameter, project_type)
 % This function is from Zhi-Hua Zhou homepage and is modified by Jianhua Xu
-% Input: 
+% Input:
 %       X -- centered training instance matrix (N *d)
 %       Y -- centered training label matrix (N*q)
 %       parameter.ratio -- reduced ratio
