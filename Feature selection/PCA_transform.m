@@ -3,7 +3,7 @@ function [P] = PCA_transform(X, Y, parameter)
 % Editor: Jianhua Xu (xujianhua@njnu.edu.cn)
 % Date: May, 2015.
 
-% Input: 
+% Input:
 %       X -- centered training instance vectors (N *d)
 %       parameter.ratio -- reduced ratio
 % Output: 
