@@ -7,7 +7,7 @@ Python 3.8 numpy pandas scikit-learn tensorflow keras
 
 ###Guiding principles:
 
-**The dataset file contains the Gram-positive bacteria dataset, the human dataset, the virus dataset, the Gram-negative bacteria, the plant dataset,the SARS-CoV-2 dataset.
+**The dataset file contains the Gram-positive bacteria dataset, the human dataset, the virus dataset, the Gram-negative bacteria, the plant dataset, the SARS-CoV-2 dataset.
 
 **Feature extraction： CTDC.py,CTDD.py,CTDT.py is the implementation of CTD. CTrisd.py is the implementation of CT. DDE.py is the implementation of DDE. DPC.py is the implementation of DPC. ebgw1.m, ebgw2.m, ebgw3.m, mainEBGW.m is the implementation of EBGW. PsePSSM.m is the implementation of PsePSSM.
 
